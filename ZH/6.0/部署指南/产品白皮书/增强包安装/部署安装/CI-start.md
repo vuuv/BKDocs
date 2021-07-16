@@ -30,7 +30,7 @@ cd "${CTRL_DIR:-/data/install}"
 >
 > 从 `v1.2.x` 系列版本升级的用户，请更新 `install.config` 文件。
 
-编辑 install.config，指示ci的安装拓扑。参考示例：（请修改IP1等为合适的IP）
+编辑 install.config，保持原有内容不变，新增ci的安装拓扑描述。内容参考示例：（请修改IP1等为合适的IP）
 ```
 # 服务端(网关+微服务), 单节点要求最低配置8核16G. 后期可升级节点硬件配置或分散微服务到不同节点.
 IP1 ci(gateway)
