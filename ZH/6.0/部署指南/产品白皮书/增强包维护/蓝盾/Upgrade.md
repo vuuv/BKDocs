@@ -6,10 +6,15 @@
 ## 流水线（CI）升级指引
 ### v1.2.x -> v1.5.x
 支持直接从灰度体验的 `v1.2.x` 版本升级。
+但需先移除openresty目录内的符合链接：
+```bash
+pcmd -m ci_gateway 'find /usr/local/openresty/nginx/ -maxdepth 1 -type l -delete'
+```
+
 引入了新的关键微服务 `dispatch-docker`，必须更新 install.config 文件，请以快速部署文档描述为准。
+
 ### v1.2.x -> v1.3.x
-支持直接从灰度体验的 `v1.2.x` 版本升级。
-引入了新的关键微服务 `dispatch-docker`，必须更新 install.config 文件，请以快速部署文档描述为准。
+v1.3.x 未正式发布，可参考 v1.5.x 更新指引。
 
 ## 流水线（CI）部署流程变更记录
 部分对接蓝鲸社区版的操作会放在部署流程中更新，部署脚本随代码发布更新。
